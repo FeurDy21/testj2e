@@ -1,6 +1,12 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+
 <%@page import="com.feurdy.beans.Personne"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+
+<%@ page pageEncoding="UTF-8" %>
+
+
+<%@ page import="java.util.List, java.util.Date" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +14,18 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<p><%@ include file="formlaire-personne.jsp" %></p>
+
 <p>Je suis bon en JEE, en veritable JEE</p>
 
-<!-- <%@ include file="uneAutreJSP.jsp" %>pour inclure la page unrAutreJSP en lagage JSP         <%@ page import="java.util.List, java.util.Date" pour faire de l'importation  %>-->
+<c:out value="je suis fort en JEE"> ok ok</c:out>
+
+
 
 <%
+
+
  String varr= (String) request.getAttribute("var");
   out.println(varr);
    
